@@ -1,4 +1,5 @@
 import Foundation
+import ysocket
 
 public protocol OSCServerDelegate: class {
     func didReceive(_ data: Data)

@@ -1,4 +1,5 @@
 import Foundation
+import ysocket
 
 @objc open class OSCClient: NSObject {
     open var address: String {
