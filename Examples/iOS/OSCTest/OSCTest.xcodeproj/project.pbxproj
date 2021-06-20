@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,23 +12,8 @@
 		031ABE751FB64DC7005184D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031ABE731FB64DC7005184D4 /* Main.storyboard */; };
 		031ABE771FB64DC7005184D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031ABE761FB64DC7005184D4 /* Assets.xcassets */; };
 		031ABE7A1FB64DC7005184D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031ABE781FB64DC7005184D4 /* LaunchScreen.storyboard */; };
-		03F4BBF11FB6E2C100193238 /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F4BBF01FB6E2B900193238 /* SwiftOSC.framework */; };
-		03F4BBF21FB6E2C100193238 /* SwiftOSC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03F4BBF01FB6E2B900193238 /* SwiftOSC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5FDA145267F374300CC417C /* SwiftOSC in Frameworks */ = {isa = PBXBuildFile; productRef = F5FDA144267F374300CC417C /* SwiftOSC */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		031ABE8C1FB64DEB005184D4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				03F4BBF21FB6E2C100193238 /* SwiftOSC.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		031ABE6C1FB64DC7005184D4 /* OSCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,7 +23,7 @@
 		031ABE761FB64DC7005184D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031ABE791FB64DC7005184D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		031ABE7B1FB64DC7005184D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03F4BBF01FB6E2B900193238 /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FDA143267F373000CC417C /* SwiftOSC */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftOSC; path = ../../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03F4BBF11FB6E2C100193238 /* SwiftOSC.framework in Frameworks */,
+				F5FDA145267F374300CC417C /* SwiftOSC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +41,7 @@
 		031ABE631FB64DC7005184D4 = {
 			isa = PBXGroup;
 			children = (
+				F5FDA142267F373000CC417C /* Packages */,
 				031ABE6E1FB64DC7005184D4 /* OSCTest */,
 				031ABE6D1FB64DC7005184D4 /* Products */,
 				03F4BBEE1FB6E2B900193238 /* Frameworks */,
@@ -86,9 +72,16 @@
 		03F4BBEE1FB6E2B900193238 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03F4BBF01FB6E2B900193238 /* SwiftOSC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5FDA142267F373000CC417C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F5FDA143267F373000CC417C /* SwiftOSC */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,13 +94,15 @@
 				031ABE681FB64DC7005184D4 /* Sources */,
 				031ABE691FB64DC7005184D4 /* Frameworks */,
 				031ABE6A1FB64DC7005184D4 /* Resources */,
-				031ABE8C1FB64DEB005184D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = OSCTest;
+			packageProductDependencies = (
+				F5FDA144267F374300CC417C /* SwiftOSC */,
+			);
 			productName = OSCTest;
 			productReference = 031ABE6C1FB64DC7005184D4 /* OSCTest.app */;
 			productType = "com.apple.product-type.application";
@@ -298,7 +293,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -306,12 +302,14 @@
 		031ABE7F1FB64DC7005184D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5C99V536K;
 				INFOPLIST_FILE = OSCTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = audio.existential.OSCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -322,12 +320,14 @@
 		031ABE801FB64DC7005184D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5C99V536K;
 				INFOPLIST_FILE = OSCTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = audio.existential.OSCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -357,6 +357,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5FDA144267F374300CC417C /* SwiftOSC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftOSC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 031ABE641FB64DC7005184D4 /* Project object */;
 }

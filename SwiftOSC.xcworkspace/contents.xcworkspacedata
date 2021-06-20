@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CHANGELOG.md">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:Playgrounds.playground">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Package">
+      <Group
+         location = "group:/Users/aon/code/github/SwiftOSC/Sources"
+         name = "Sources">
+         <Group
+            location = "group:ysocket"
+            name = "ysocket">
+            <Group
+               location = "group:Swift"
+               name = "Swift">
+               <FileRef
+                  location = "group:yudpsocket.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:ysocket.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:C"
+               name = "C">
+               <FileRef
+                  location = "group:yudpsocket.c">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:SwiftOSC"
+            name = "SwiftOSC">
+            <Group
+               location = "group:Types"
+               name = "Types">
+               <FileRef
+                  location = "group:Timetag.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Blob.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Impulse.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Int.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCTypeProtocol.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:String.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Bool.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Float.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Elements"
+               name = "Elements">
+               <FileRef
+                  location = "group:OSCMessage.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCElementProtocol.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCBundle.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Addresses"
+               name = "Addresses">
+               <FileRef
+                  location = "group:OSCAddress.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCAddressPattern.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Communication"
+               name = "Communication">
+               <FileRef
+                  location = "group:OSCServer.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCClient.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Helpers"
+               name = "Helpers">
+               <FileRef
+                  location = "group:Timer.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Extensions.swift">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:/Users/aon/code/github/SwiftOSC/Package.swift">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Examples"
+      name = "Examples">
+      <Group
+         location = "group:macOS"
+         name = "macOS">
+         <Group
+            location = "group:OSCMonitor"
+            name = "OSCMonitor">
+            <FileRef
+               location = "group:OSCMonitor.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:OSCMonitor"
+               name = "OSCMonitor">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:TableData.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:OSCMonitor.entitlements">
+               </FileRef>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:iOS"
+         name = "iOS">
+         <Group
+            location = "group:OSCTest"
+            name = "OSCTest">
+            <FileRef
+               location = "group:OSCTest.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:OSCTest"
+               name = "OSCTest">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
+</Workspace>

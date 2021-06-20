@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,8 @@
 		033827B81D3999590065A3A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033827B71D3999590065A3A7 /* ViewController.swift */; };
 		033827BA1D3999590065A3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033827B91D3999590065A3A7 /* Assets.xcassets */; };
 		033827BD1D3999590065A3A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033827BB1D3999590065A3A7 /* Main.storyboard */; };
-		035F84801FB6F3A200C8C333 /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035F847F1FB6F39500C8C333 /* SwiftOSC.framework */; };
-		035F84811FB6F3A200C8C333 /* SwiftOSC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 035F847F1FB6F39500C8C333 /* SwiftOSC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03D25C2D1D3A2D2E00BE9674 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D25C2C1D3A2D2E00BE9674 /* TableData.swift */; };
+		F5FDA149267F37CB00CC417C /* SwiftOSC in Frameworks */ = {isa = PBXBuildFile; productRef = F5FDA148267F37CB00CC417C /* SwiftOSC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				035F84811FB6F3A200C8C333 /* SwiftOSC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,8 +36,8 @@
 		033827B91D3999590065A3A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033827BC1D3999590065A3A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033827BE1D3999590065A3A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		035F847F1FB6F39500C8C333 /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D25C2C1D3A2D2E00BE9674 /* TableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
+		F5FDA147267F37BF00CC417C /* SwiftOSC */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftOSC; path = ../../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035F84801FB6F3A200C8C333 /* SwiftOSC.framework in Frameworks */,
+				F5FDA149267F37CB00CC417C /* SwiftOSC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +55,7 @@
 		033827A91D3999590065A3A7 = {
 			isa = PBXGroup;
 			children = (
+				F5FDA146267F37BF00CC417C /* Packages */,
 				033827B41D3999590065A3A7 /* OSCMonitor */,
 				033827B31D3999590065A3A7 /* Products */,
 				035F847D1FB6F39500C8C333 /* Frameworks */,
@@ -88,9 +87,16 @@
 		035F847D1FB6F39500C8C333 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				035F847F1FB6F39500C8C333 /* SwiftOSC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5FDA146267F37BF00CC417C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F5FDA147267F37BF00CC417C /* SwiftOSC */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +116,9 @@
 			dependencies = (
 			);
 			name = OSCMonitor;
+			packageProductDependencies = (
+				F5FDA148267F37CB00CC417C /* SwiftOSC */,
+			);
 			productName = OSCMonitor;
 			productReference = 033827B21D3999590065A3A7 /* OSCMonitor.app */;
 			productType = "com.apple.product-type.application";
@@ -292,7 +301,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -306,7 +316,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5C99V536K;
 				INFOPLIST_FILE = OSCMonitor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = audio.existential.OSCMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -324,7 +337,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5C99V536K;
 				INFOPLIST_FILE = OSCMonitor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = audio.existential.OSCMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +370,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5FDA148267F37CB00CC417C /* SwiftOSC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftOSC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 033827AA1D3999590065A3A7 /* Project object */;
 }
