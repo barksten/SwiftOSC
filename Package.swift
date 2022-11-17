@@ -1,11 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.7
 
 import PackageDescription
 
 let package = Package(
     name: "SwiftOSC",
     products: [
-        
         .library(
             name: "SwiftOSC",
             targets: ["SwiftOSC"]
@@ -16,7 +15,7 @@ let package = Package(
         .target(
             name: "SwiftOSC",
             dependencies: [
-                "ysocket"
+                "ysocket",
             ]
         ),
         .target(
